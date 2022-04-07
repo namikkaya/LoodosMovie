@@ -8,6 +8,7 @@ target 'LoodosMovie' do
   # Pods for LoodosMovie
   pod 'Alamofire', '~> 5.5'
   pod 'Kingfisher', '~> 7.0'
+  pod 'lottie-ios'
 
   target 'LoodosMovieTests' do
     inherit! :search_paths
