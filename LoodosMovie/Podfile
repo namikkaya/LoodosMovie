@@ -10,6 +10,8 @@ target 'LoodosMovie' do
   pod 'Kingfisher', '~> 7.0'
   pod 'lottie-ios'
   pod 'Firebase'
+  pod 'Firebase/RemoteConfig'
+  pod 'ReachabilitySwift'
 
   target 'LoodosMovieTests' do
     inherit! :search_paths
