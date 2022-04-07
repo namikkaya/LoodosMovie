@@ -15,6 +15,9 @@
 		4D73A66027FEC1BB0058F0C0 /* LoodosMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A65F27FEC1BB0058F0C0 /* LoodosMovieTests.swift */; };
 		4D73A66A27FEC1BB0058F0C0 /* LoodosMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A66927FEC1BB0058F0C0 /* LoodosMovieUITests.swift */; };
 		4D73A66C27FEC1BB0058F0C0 /* LoodosMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A66B27FEC1BB0058F0C0 /* LoodosMovieUITestsLaunchTests.swift */; };
+		4D73A68427FED0030058F0C0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A68327FED0030058F0C0 /* Coordinator.swift */; };
+		4D73A68727FED2470058F0C0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A68627FED2470058F0C0 /* Router.swift */; };
+		4D73A68A27FED3260058F0C0 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A68927FED3260058F0C0 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4D73A66527FEC1BB0058F0C0 /* LoodosMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoodosMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D73A66927FEC1BB0058F0C0 /* LoodosMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoodosMovieUITests.swift; sourceTree = "<group>"; };
 		4D73A66B27FEC1BB0058F0C0 /* LoodosMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoodosMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D73A68327FED0030058F0C0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4D73A68627FED2470058F0C0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4D73A68927FED3260058F0C0 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,8 @@
 		4D73A67827FEC2D50058F0C0 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				4D73A68527FED23B0058F0C0 /* Router */,
+				4D73A68327FED0030058F0C0 /* Coordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 		4D73A67A27FEC2FF0058F0C0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4D73A68827FED2CD0058F0C0 /* Base */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -210,6 +219,22 @@
 			children = (
 			);
 			path = OutputEntities;
+			sourceTree = "<group>";
+		};
+		4D73A68527FED23B0058F0C0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4D73A68627FED2470058F0C0 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4D73A68827FED2CD0058F0C0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4D73A68927FED3260058F0C0 /* BaseNavigationController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,8 +368,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D73A68727FED2470058F0C0 /* Router.swift in Sources */,
 				4D73A64D27FEC1B90058F0C0 /* ViewController.swift in Sources */,
 				4D73A64927FEC1B90058F0C0 /* AppDelegate.swift in Sources */,
+				4D73A68A27FED3260058F0C0 /* BaseNavigationController.swift in Sources */,
+				4D73A68427FED0030058F0C0 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
