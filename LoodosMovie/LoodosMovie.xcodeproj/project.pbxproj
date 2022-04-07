@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D73A64927FEC1B90058F0C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A64827FEC1B90058F0C0 /* AppDelegate.swift */; };
-		4D73A64B27FEC1B90058F0C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A64A27FEC1B90058F0C0 /* SceneDelegate.swift */; };
 		4D73A64D27FEC1B90058F0C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A64C27FEC1B90058F0C0 /* ViewController.swift */; };
 		4D73A65027FEC1B90058F0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D73A64E27FEC1B90058F0C0 /* Main.storyboard */; };
 		4D73A65227FEC1BB0058F0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D73A65127FEC1BB0058F0C0 /* Assets.xcassets */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		4D73A64527FEC1B90058F0C0 /* LoodosMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D73A64827FEC1B90058F0C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D73A64A27FEC1B90058F0C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4D73A64C27FEC1B90058F0C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D73A64F27FEC1B90058F0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D73A65127FEC1BB0058F0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,8 +97,11 @@
 		4D73A64727FEC1B90058F0C0 /* LoodosMovie */ = {
 			isa = PBXGroup;
 			children = (
+				4D73A67827FEC2D50058F0C0 /* Coordinators */,
+				4D73A67927FEC2E00058F0C0 /* Layers */,
+				4D73A67B27FEC3130058F0C0 /* Views */,
+				4D73A67A27FEC2FF0058F0C0 /* Utilities */,
 				4D73A64827FEC1B90058F0C0 /* AppDelegate.swift */,
-				4D73A64A27FEC1B90058F0C0 /* SceneDelegate.swift */,
 				4D73A64C27FEC1B90058F0C0 /* ViewController.swift */,
 				4D73A64E27FEC1B90058F0C0 /* Main.storyboard */,
 				4D73A65127FEC1BB0058F0C0 /* Assets.xcassets */,
@@ -125,6 +126,90 @@
 				4D73A66B27FEC1BB0058F0C0 /* LoodosMovieUITestsLaunchTests.swift */,
 			);
 			path = LoodosMovieUITests;
+			sourceTree = "<group>";
+		};
+		4D73A67827FEC2D50058F0C0 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		4D73A67927FEC2E00058F0C0 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				4D73A67F27FEC3690058F0C0 /* Domain */,
+				4D73A67C27FEC34E0058F0C0 /* Builders */,
+				4D73A67D27FEC3560058F0C0 /* Presentation */,
+				4D73A67E27FEC35E0058F0C0 /* Data */,
+				4D73A68027FEC37C0058F0C0 /* Remote */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		4D73A67A27FEC2FF0058F0C0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4D73A67B27FEC3130058F0C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D73A67C27FEC34E0058F0C0 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		4D73A67D27FEC3560058F0C0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4D73A67E27FEC35E0058F0C0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4D73A68227FEC39B0058F0C0 /* OutputEntities */,
+				4D73A68127FEC3930058F0C0 /* InputEntities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4D73A67F27FEC3690058F0C0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4D73A68027FEC37C0058F0C0 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		4D73A68127FEC3930058F0C0 /* InputEntities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InputEntities;
+			sourceTree = "<group>";
+		};
+		4D73A68227FEC39B0058F0C0 /* OutputEntities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OutputEntities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +345,6 @@
 			files = (
 				4D73A64D27FEC1B90058F0C0 /* ViewController.swift in Sources */,
 				4D73A64927FEC1B90058F0C0 /* AppDelegate.swift in Sources */,
-				4D73A64B27FEC1B90058F0C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
