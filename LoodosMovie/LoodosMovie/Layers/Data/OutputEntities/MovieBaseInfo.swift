@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MovieBaseInfoProtocol: Codable {
+protocol MovieBaseInfo: Codable {
     var Title:String? { get set }
     var Year:String? { get set }
     var imdbID:String? { get set }

@@ -33,7 +33,7 @@ extension Coordinator {
     }
     
     func start() {}
-    func startWithCompletion(completion: @escaping () -> () = {}) {}
+    func startWithCompletion(completion: @escaping () -> ()) {}
     func reset(completion: @escaping () -> () = {}) {}
     func finishViewController(controller: UIViewController) {}
 }

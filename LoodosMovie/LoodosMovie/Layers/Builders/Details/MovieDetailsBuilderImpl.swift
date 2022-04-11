@@ -7,17 +7,17 @@
 
 import Foundation
 
-protocol MovieDetailsBuilderProtocol {
+protocol MovieDetailsBuilder {
     func build(coordinatorDelegate: CommonControllerToCoordinatorDelegate, imdbID: String) -> BaseViewController
 }
 
-struct MovieDetailsBuilder: MovieDetailsBuilderProtocol {
+struct MovieDetailsBuilderImpl: MovieDetailsBuilder {
     func build(coordinatorDelegate: CommonControllerToCoordinatorDelegate, imdbID: String) -> BaseViewController {
         let vc = MovieDetailsVC.init(nibName: MovieDetailsVC.className, bundle: nil)
         let apiManager = ApiManager()
         let analytics = AnalyticsManager()
         let service = FetchMovieDetailsService(apiManager: apiManager)
-        let useCase = DetailMovieUseCase(detailService: service, analytics: analytics)
+        let useCase = DetailMovieUseCaseImpl(detailService: service, analytics: analytics)
         let vm = MovieDetailsVM(useCase: useCase, imdbID: imdbID)
         vc.injectVM(vm: vm)
         return vc

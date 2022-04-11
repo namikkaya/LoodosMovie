@@ -31,7 +31,7 @@ class MainCoordinator: NSObject, MainCoordinatoring {
     }
     
     func start() {
-        let vc = HomeBuilder().build(coordinatorDelegate: self)
+        let vc = HomeBuilderImpl().build(coordinatorDelegate: self)
         vc.coordinatorDelegate = self
         DispatchQueue.main.async { [weak self] in
             self?.navigationController.viewControllers = [vc]
@@ -54,7 +54,7 @@ class MainCoordinator: NSObject, MainCoordinatoring {
     }
     
     func goToDetail(imdbID: String) {
-        let vc = MovieDetailsBuilder().build(coordinatorDelegate: self, imdbID: imdbID)
+        let vc = MovieDetailsBuilderImpl().build(coordinatorDelegate: self, imdbID: imdbID)
         vc.coordinatorDelegate = self
         DispatchQueue.main.async { [weak self] in
             self?.navigationController.pushViewController(vc, animated: true)

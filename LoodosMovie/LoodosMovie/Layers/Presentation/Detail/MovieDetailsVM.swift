@@ -8,23 +8,23 @@
 import Foundation
 import UIKit
 
-protocol MovieDetailsViewModelProtocol: ViewModelProtocol {
+protocol MovieDetailsViewModel: ViewModel {
     var imdbID: String { get set }
 }
 
-class MovieDetailsVM: MovieDetailsViewModelProtocol {
+class MovieDetailsVM: MovieDetailsViewModel {
     var imdbID: String
     
     typealias O = ObservationType
     var stateClosure: ((ObservationType<DetailObservation, ErrorEntity>) -> ())?
     
-    private let useCase:DetailMovieUseCaseProtocol
+    private let useCase:DetailMovieUseCase
     
     private(set) var detailData: MovieDetails?
     
     private var sections: [SectionType] = []
     
-    init(useCase: DetailMovieUseCaseProtocol, imdbID: String) {
+    init(useCase: DetailMovieUseCase, imdbID: String) {
         self.useCase = useCase
         self.imdbID = imdbID
     }

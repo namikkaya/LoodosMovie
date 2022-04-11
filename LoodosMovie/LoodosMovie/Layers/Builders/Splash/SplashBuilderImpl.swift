@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol SplashBuilderProtocol {
+protocol SplashBuilder {
     func build(coordinatorDelegate: CommonControllerToCoordinatorDelegate) -> BaseViewController
 }
 
-struct SplashBuilder: SplashBuilderProtocol {
+struct SplashBuilderImpl: SplashBuilder {
     func build(coordinatorDelegate: CommonControllerToCoordinatorDelegate) -> BaseViewController {
         let vc = SplashVC.init(nibName: SplashVC.className, bundle: nil)
         vc.coordinatorDelegate = coordinatorDelegate

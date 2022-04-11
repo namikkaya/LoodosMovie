@@ -21,7 +21,7 @@ class AppCoordinator: NSObject, AppCoordinatoring {
     }
     
     func start() {
-        let vc = SplashBuilder().build(coordinatorDelegate: self)
+        let vc = SplashBuilderImpl().build(coordinatorDelegate: self)
         self.navigationController.viewControllers = [vc]
     }
     

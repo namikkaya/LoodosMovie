@@ -7,16 +7,16 @@
 
 import Foundation
 
-protocol HomeBuilderProtocol {
+protocol HomeBuilder {
     func build(coordinatorDelegate: CommonControllerToCoordinatorDelegate) -> BaseViewController
 }
 
-struct HomeBuilder: HomeBuilderProtocol {
+struct HomeBuilderImpl: HomeBuilder {
     func build(coordinatorDelegate: CommonControllerToCoordinatorDelegate) -> BaseViewController {
         let vc = HomeVC.init(nibName: HomeVC.className, bundle: nil)
         let apiManager = ApiManager()
         let service = FetchMovieService(apiManager: apiManager)
-        let useCase = ListMovieUseCase(searchServise: service)
+        let useCase = ListMovieUseCaseImpl(searchServise: service)
         let vm = HomeVM(listUseCase: useCase)
         vc.injectVM(vm: vm)
         return vc

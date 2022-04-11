@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ListMovieUseCaseProtocol {
+protocol ListMovieUseCase {
     func fetchSearchList(keyword: String, completion: @escaping FetchMovieService.FetchMovieCompletion)
 }
 
-struct ListMovieUseCase: ListMovieUseCaseProtocol {
+struct ListMovieUseCaseImpl: ListMovieUseCase {
     
     private let searchService: FetchMovieServiceProtocol
     init(searchServise: FetchMovieServiceProtocol) {

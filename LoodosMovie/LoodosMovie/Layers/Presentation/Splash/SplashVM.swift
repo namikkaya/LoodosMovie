@@ -7,14 +7,13 @@
 
 import Foundation
 
-protocol SplashViewModelProtocol: ViewModelProtocol {
+protocol SplashViewModel: ViewModel {
     
 }
 
-class SplashVM: SplashViewModelProtocol {
-    typealias O = ObservationType
+class SplashVM: SplashViewModel {
     var stateClosure: ((ObservationType<SplashObservation, ErrorEntity>) -> ())?
-    
+    typealias O = ObservationType
     private let configService: FirebaseRemoteConfigurable
     
     init(configService: FirebaseRemoteConfigurable) {

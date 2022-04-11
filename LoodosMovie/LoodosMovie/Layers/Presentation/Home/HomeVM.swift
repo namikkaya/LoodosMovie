@@ -8,21 +8,21 @@
 import Foundation
 import UIKit
 
-protocol HomeViewModelProtocol: ViewModelProtocol {
+protocol HomeViewModel: ViewModel {
     
 }
 
-class HomeVM: HomeViewModelProtocol {
+class HomeVM: HomeViewModel {
     
     var stateClosure: ((ObservationType<HomeObservation, ErrorEntity>) -> ())?
     
     typealias O = ObservationType
     
-    private let listUseCase: ListMovieUseCaseProtocol
+    private let listUseCase: ListMovieUseCase
     
     private var sections:[SectionType] = []
     
-    init(listUseCase: ListMovieUseCaseProtocol) {
+    init(listUseCase: ListMovieUseCase) {
         self.listUseCase = listUseCase
     }
     

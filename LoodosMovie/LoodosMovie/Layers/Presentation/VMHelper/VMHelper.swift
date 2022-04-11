@@ -11,7 +11,7 @@ enum ObservationType<T, E> {
     case updateUI(data: T? = nil), error(error: E?)
 }
 
-protocol ViewModelProtocol {
+protocol ViewModel {
     associatedtype O
     var stateClosure: ((O) -> ())? { get set }
     func start()

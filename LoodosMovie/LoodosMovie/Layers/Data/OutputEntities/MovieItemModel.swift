@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieItemModel: MovieBaseInfoProtocol {
+struct MovieItemModel: MovieBaseInfo {
     var Title:String?
     var Year:String?
     var imdbID:String?

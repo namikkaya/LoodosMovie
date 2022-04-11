@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol DetailMovieUseCaseProtocol {
+protocol DetailMovieUseCase {
     func fetchMovieDetails(imdbID: String?, completion: @escaping FetchMovieDetailsService.FetchMovieDetailsCompletion)
     func logEvent(detail: MovieDetails)
 }
 
-struct DetailMovieUseCase: DetailMovieUseCaseProtocol {
+struct DetailMovieUseCaseImpl: DetailMovieUseCase {
     private let detailService: FetchMovieDetailsServiceProtocol
     private let analytics: AnalyticsLogable
     init(detailService: FetchMovieDetailsServiceProtocol, analytics: AnalyticsLogable) {

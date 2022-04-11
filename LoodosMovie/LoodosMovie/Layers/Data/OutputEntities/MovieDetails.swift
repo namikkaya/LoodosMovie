@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieDetails: MovieBaseInfoProtocol {
+struct MovieDetails: MovieBaseInfo {
     var Title: String?
     var Year: String?
     var imdbID: String?
