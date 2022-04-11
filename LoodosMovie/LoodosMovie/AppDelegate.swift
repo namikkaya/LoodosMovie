@@ -7,39 +7,51 @@
 
 import UIKit
 import Firebase
-import FirebaseRemoteConfig
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var remoteConfig: RemoteConfig?
+    var window: UIWindow?
+    var coordinator: AppCoordinatorDelegate?
+    let network = NetworkManager()
+    
+    var noConnectionVC: NoInternetConnectionVC?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        startRemoteConfig()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        window!.overrideUserInterfaceStyle = .light
+        let navController = BaseNavigationController()
+        
+        self.window?.rootViewController = navController
+        self.window?.makeKeyAndVisible()
+        
+        setupNetworkListener()
+        setupCoordinator(navController: navController)
+        
         return true
     }
-}
-
-extension AppDelegate {
-    private func startRemoteConfig() {
-        remoteConfig = RemoteConfig.remoteConfig()
-        let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = 0
-        remoteConfig?.configSettings = settings
-        fetchConfig()
+    
+    private func setupCoordinator(navController: BaseNavigationController) {
+        coordinator = AppCoordinator(navigationController: navController)
+        coordinator?.start {}
     }
     
-    private func fetchConfig() {
-        remoteConfig?.fetch { (status, error) -> Void in
-          if status == .success {
-            print("Config fetched!")
-            self.remoteConfig?.activate { changed, error in
-              // data
+    private func setupNetworkListener() {
+        network.isReachable { [weak self] status in
+            if (status) {
+                if self?.noConnectionVC != nil {
+                    self?.noConnectionVC?.dismiss(animated: false)
+                    self?.noConnectionVC = nil
+                }
+            }else {
+                if self?.noConnectionVC == nil {
+                    self?.noConnectionVC = NoInternetConnectionVC(nibName: NoInternetConnectionVC.className, bundle: nil)
+                    self?.noConnectionVC?.modalPresentationStyle = .overFullScreen
+                    DispatchQueue.main.async {
+                        self?.window?.rootViewController?.present(self?.noConnectionVC ?? UIViewController(), animated: false)
+                    }
+                }
             }
-          } else {
-            print("Config not fetched")
-            print("Error: \(error?.localizedDescription ?? "No error available.")")
-          }
-          //self.displayWelcome()
-            // hareket
         }
     }
 }

@@ -12,6 +12,7 @@ target 'LoodosMovie' do
   pod 'Firebase'
   pod 'Firebase/RemoteConfig'
   pod 'ReachabilitySwift'
+  pod 'Firebase/InAppMessaging'
 
   target 'LoodosMovieTests' do
     inherit! :search_paths

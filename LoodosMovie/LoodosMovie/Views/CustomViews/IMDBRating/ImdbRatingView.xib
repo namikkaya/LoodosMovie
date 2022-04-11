@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImdbRatingView" customModule="LoodosMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="contentContainer" destination="iN0-l3-epB" id="ukE-Zz-dMG"/>
+                <outlet property="ratingLabel" destination="1nx-Hm-pH5" id="LZo-ri-MXH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="81" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TQ-TS-Eje">
+                    <rect key="frame" x="0.0" y="0.0" width="81" height="72"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMDbLogo" translatesAutoresizingMaskIntoConstraints="NO" id="f37-hf-Yz0">
+                            <rect key="frame" x="0.0" y="0.0" width="81" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="f37-hf-Yz0" secondAttribute="height" multiplier="81:41" id="tkF-dl-TNz"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEo-b1-kHS">
+                            <rect key="frame" x="0.0" y="41" width="81" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nx-Hm-pH5">
+                                    <rect key="frame" x="4" y="8" width="73" height="15"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <color key="textColor" name="appYellow"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.2361009386" green="0.2361009386" blue="0.2361009386" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <size key="shadowOffset" width="0.5" height="0.5"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="appGrey"/>
+                            <constraints>
+                                <constraint firstItem="1nx-Hm-pH5" firstAttribute="centerY" secondItem="QEo-b1-kHS" secondAttribute="centerY" id="AzV-MV-cwn"/>
+                                <constraint firstItem="1nx-Hm-pH5" firstAttribute="leading" secondItem="QEo-b1-kHS" secondAttribute="leading" constant="4" id="dSc-77-jlJ"/>
+                                <constraint firstAttribute="trailing" secondItem="1nx-Hm-pH5" secondAttribute="trailing" constant="4" id="vBO-AR-ZM0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="f37-hf-Yz0" secondAttribute="trailing" id="0Q0-bM-keC"/>
+                        <constraint firstAttribute="trailing" secondItem="QEo-b1-kHS" secondAttribute="trailing" id="AMC-xc-z77"/>
+                        <constraint firstItem="QEo-b1-kHS" firstAttribute="top" secondItem="f37-hf-Yz0" secondAttribute="bottom" id="R8h-1r-OB2"/>
+                        <constraint firstAttribute="bottom" secondItem="QEo-b1-kHS" secondAttribute="bottom" id="RAC-Ai-FzK"/>
+                        <constraint firstItem="QEo-b1-kHS" firstAttribute="leading" secondItem="8TQ-TS-Eje" secondAttribute="leading" id="jaa-2P-6fp"/>
+                        <constraint firstItem="f37-hf-Yz0" firstAttribute="leading" secondItem="8TQ-TS-Eje" secondAttribute="leading" id="mKu-ML-CCL"/>
+                        <constraint firstItem="f37-hf-Yz0" firstAttribute="top" secondItem="8TQ-TS-Eje" secondAttribute="top" id="mYX-Ja-2ae"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8TQ-TS-Eje" secondAttribute="bottom" id="MxM-Id-Fdt"/>
+                <constraint firstAttribute="trailing" secondItem="8TQ-TS-Eje" secondAttribute="trailing" id="fhc-sE-f8R"/>
+                <constraint firstItem="8TQ-TS-Eje" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nCt-qj-yhX"/>
+                <constraint firstItem="8TQ-TS-Eje" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wuL-Pg-wl3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-109.42028985507247" y="261.83035714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IMDbLogo" width="383" height="193"/>
+        <namedColor name="appGrey">
+            <color red="0.25099998712539673" green="0.24699999392032623" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appYellow">
+            <color red="0.91299998760223389" green="0.77300000190734863" blue="0.010999999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,9 +8,18 @@
 import Foundation
 
 enum AppFlowEventType {
-    case app, main
+    case app(flowType: AppFlowType),
+         main(flowType: MainFlowType)
 }
 
 enum CoordinatorEventType {
     case finishCoordinator(coordinator: Coordinator)
+}
+
+enum AppFlowType {
+    case goToMain
+}
+
+enum MainFlowType {
+    case detail(imdbID:String)
 }

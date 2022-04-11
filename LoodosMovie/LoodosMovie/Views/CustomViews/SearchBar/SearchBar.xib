@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchBar" customModule="LoodosMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="contentContainer" destination="g46-rz-Pja" id="V1z-Oe-g0p"/>
+                <outlet property="inputTextField" destination="ynZ-V2-Din" id="LS7-q8-ebU"/>
+                <outlet property="textFieldContainer" destination="XgF-Oq-I9f" id="8DE-WX-rT3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g46-rz-Pja">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgF-Oq-I9f">
+                            <rect key="frame" x="20" y="10" width="374" height="35"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Arama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ynZ-V2-Din">
+                                    <rect key="frame" x="5" y="0.0" width="364" height="35"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" red="0.83571709526909721" green="0.83571709526909721" blue="0.83571709526909721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="ynZ-V2-Din" firstAttribute="top" secondItem="XgF-Oq-I9f" secondAttribute="top" id="Hj0-mo-Uai"/>
+                                <constraint firstAttribute="height" constant="35" id="bsb-f7-u0c"/>
+                                <constraint firstAttribute="trailing" secondItem="ynZ-V2-Din" secondAttribute="trailing" constant="5" id="fk9-u7-0XG"/>
+                                <constraint firstAttribute="bottom" secondItem="ynZ-V2-Din" secondAttribute="bottom" id="uZi-Y7-AHr"/>
+                                <constraint firstItem="ynZ-V2-Din" firstAttribute="leading" secondItem="XgF-Oq-I9f" secondAttribute="leading" constant="5" id="vhg-ui-ghe"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="appGrey"/>
+                    <constraints>
+                        <constraint firstItem="XgF-Oq-I9f" firstAttribute="leading" secondItem="g46-rz-Pja" secondAttribute="leading" constant="20" id="JmL-Aa-S9b"/>
+                        <constraint firstAttribute="trailing" secondItem="XgF-Oq-I9f" secondAttribute="trailing" constant="20" id="SDL-fB-VNJ"/>
+                        <constraint firstItem="XgF-Oq-I9f" firstAttribute="top" secondItem="g46-rz-Pja" secondAttribute="top" constant="10" id="dO4-t4-7Tc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="g46-rz-Pja" secondAttribute="bottom" id="4yx-X0-M0p"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g46-rz-Pja" secondAttribute="trailing" id="8o3-eR-c8c"/>
+                <constraint firstItem="g46-rz-Pja" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="q0V-gx-2AC"/>
+                <constraint firstItem="g46-rz-Pja" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vWr-02-p0s"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-151.67410714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="appGrey">
+            <color red="0.25099998712539673" green="0.24699999392032623" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashVC" customModule="LoodosMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="S1b-97-Mrg" id="4eO-o3-Og1"/>
+                <outlet property="configLabel" destination="lXY-s3-Wix" id="ptM-Yy-6bB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1b-97-Mrg" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="40" y="281" width="334" height="334"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="S1b-97-Mrg" secondAttribute="height" multiplier="1:1" id="IbF-Tg-CCc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="blackMovieLoading"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loodos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXY-s3-Wix">
+                    <rect key="frame" x="0.0" y="819" width="414" height="28"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                    <color key="textColor" name="appYellow"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="appGrey"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lXY-s3-Wix" secondAttribute="bottom" constant="15" id="WMM-ey-Mjb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S1b-97-Mrg" secondAttribute="trailing" constant="40" id="d5V-j3-hdf"/>
+                <constraint firstItem="S1b-97-Mrg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eRs-pJ-tXi"/>
+                <constraint firstItem="S1b-97-Mrg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="fZQ-qx-1Fa"/>
+                <constraint firstItem="S1b-97-Mrg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hdd-pH-hVp"/>
+                <constraint firstAttribute="trailing" secondItem="lXY-s3-Wix" secondAttribute="trailing" id="qXe-ag-hww"/>
+                <constraint firstItem="lXY-s3-Wix" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yNU-Ub-tbg"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="60"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="S1b-97-Mrg"/>
+    </designables>
+    <resources>
+        <namedColor name="appGrey">
+            <color red="0.25099998712539673" green="0.24699999392032623" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appYellow">
+            <color red="0.91299998760223389" green="0.77300000190734863" blue="0.010999999940395355" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LoadingCell" customModule="LoodosMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Gln-zN-83f">
+                        <rect key="frame" x="56.5" y="6.5" width="37" height="37"/>
+                        <color key="color" name="appGrey"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Gln-zN-83f" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ajs-hi-xb3"/>
+                <constraint firstItem="Gln-zN-83f" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="o0c-TD-RwI"/>
+            </constraints>
+            <size key="customSize" width="150" height="50"/>
+            <connections>
+                <outlet property="indicatorView" destination="Gln-zN-83f" id="3yC-5p-6J1"/>
+            </connections>
+            <point key="canvasLocation" x="204.34782608695653" y="113.83928571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appGrey">
+            <color red="0.25099998712539673" green="0.24699999392032623" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

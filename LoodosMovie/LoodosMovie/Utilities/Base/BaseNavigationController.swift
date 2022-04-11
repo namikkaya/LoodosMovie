@@ -8,7 +8,7 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
-
+    weak var coordinatorDelegate: CommonControllerToCoordinatorDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         
