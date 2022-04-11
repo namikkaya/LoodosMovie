@@ -1,6 +1,6 @@
 # LoodosMovie
 
-### Loodos - Challange 
+### Loodos - Challenge
 
 - Mimari olarak Clean Architecture ve MVVM-C kullanılmıştır.
 - Splash Sayfası, Film Arama ve Listeleme Sayfası, Film Detay sayfaları eklenmiştir.
