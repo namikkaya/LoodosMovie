@@ -27,4 +27,4 @@
 
 ## NOT:
 
-Cihaz testi yapılmamıştır. Geliştirme süresince simulator kullanılmıştır.
+Cihaz testi yapılmamıştır. Geliştirme süresince simulator (iPhone 11- iOS 15.4) kullanılmıştır. -FIRDebugEnabled Scheme -> Arguments Passed On Launch için eklidir.
