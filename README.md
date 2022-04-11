@@ -9,10 +9,10 @@
 
 ### SS
 
-![](https://usaupload.com/cache/plugins/filepreviewer/522391/621a6e20251cf500a9aa87de5e56536396b1965a602f6e6dc1af4cb42353bdfd/1100x800_cropped.jpg)
+![](https://github.com/namikkaya/LoodosMovie/blob/main/logEvent.png?raw=true)
 
 > Follow your heart.
 
-![](https://usaupload.com/cache/plugins/filepreviewer/522391/621a6e20251cf500a9aa87de5e56536396b1965a602f6e6dc1af4cb42353bdfd/1100x800_cropped.jpg)
+![](https://github.com/namikkaya/LoodosMovie/blob/main/inAppMessaging.png?raw=true)
 
 > Follow your heart.
