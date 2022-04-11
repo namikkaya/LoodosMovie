@@ -12,7 +12,7 @@ enum ObservationType<T, E> {
 }
 
 protocol ViewModel {
-    associatedtype CLS
-    var stateClosure: ((CLS) -> ())? { get set }
+    /*associatedtype CLS
+    var stateClosure: ((CLS) -> ())? { get set }*/
     func start()
 }

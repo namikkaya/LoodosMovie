@@ -16,8 +16,6 @@ class HomeVM: HomeViewModel {
     
     var stateClosure: ((ObservationType<HomeObservation, ErrorEntity>) -> ())?
     
-    typealias CLS = ObservationType
-    
     private let listUseCase: ListMovieUseCase
     
     private var sections:[SectionType] = []
