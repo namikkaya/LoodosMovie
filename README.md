@@ -11,8 +11,8 @@
 
 ![](https://github.com/namikkaya/LoodosMovie/blob/main/logEvent.png)
 
-> Follow your heart.
+> Analytics Log.
 
 ![](https://github.com/namikkaya/LoodosMovie/blob/main/inAppMessaging.png)
 
-> Follow your heart.
+> In-App Messaging.
