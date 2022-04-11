@@ -7,16 +7,24 @@
 - Firebase Remote Config, Analytics, In-App Messaging kullanılmıştır.
 - Dökümanda Push Notification istenmiş ancak developer sertifikası olmadığı için In-App messaging kullanılmıştır. Detay sayfasına gidildiğinde atılan MovieDetail log event atıldığında in-App tetiklenir.
 
+<br />
+
 ### SS
 
 ![](https://github.com/namikkaya/LoodosMovie/blob/main/logEvent.png)
 
 > Analytics Log.
 
+<br />
+<br />
+
 ![](https://github.com/namikkaya/LoodosMovie/blob/main/inAppMessaging.png)
 
 > In-App Messaging.
 
-##NOT:
+<br />
+<br />
 
-Cihaz testi yapılmamıştır. 
+## NOT:
+
+Cihaz testi yapılmamıştır. Geliştirme süresince simulator kullanılmıştır.
