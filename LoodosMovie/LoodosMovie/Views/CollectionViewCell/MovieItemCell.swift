@@ -23,7 +23,7 @@ class MovieItemCell: UICollectionViewCell {
         posterImageView.cancelDownload()
         posterImageView.preparePlaceHolder()
         posterImageView.image = nil
-        clearGradient()
+        self.labelBg.clearGradient()
     }
     
     func setup(data: MovieItemModel) {
@@ -34,30 +34,12 @@ class MovieItemCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setGradientBackground()
-    }
-
-    
-    func setGradientBackground() {
-        clearGradient()
-        let colorTop = UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(0.7).cgColor
-        let colorBottom = UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(1).cgColor
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = self.labelBg.bounds
-        gradientLayer.name = "gradient"
-        self.labelBg.layer.insertSublayer(gradientLayer, at:0)
-    }
-    
-    func clearGradient() {
-        if let sublayers = labelBg.layer.sublayers {
-            for layer in sublayers {
-                if layer.name == "gradient" {
-                    layer.removeFromSuperlayer()
-                }
-            }
-        }
+        self.labelBg.setGradientBackground(colors: [
+            UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(0.7).cgColor,
+            UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(1).cgColor
+        ], locations: [
+            0.0, 1.0
+        ])
     }
 }
 

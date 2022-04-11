@@ -44,7 +44,13 @@ class StretchyTableHeaderView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setGradientBackground()
+        self.effectView.setGradientBackground(colors: [
+            UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(0).cgColor,
+            UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(0.8).cgColor,
+            UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(1).cgColor
+        ], locations: [
+            0.0, 0.8, 1.0
+        ])
     }
     
     func setup(detail: MovieDetails?) {
@@ -61,29 +67,6 @@ class StretchyTableHeaderView: UIView {
         contentContainer.clipsToBounds = offsetY <= 0
         imageViewBottom.constant = offsetY >= 0 ? 0 : -offsetY / 2
         imageViewHeight.constant = max(offsetY + scrollView.contentInset.top, scrollView.contentInset.top)
-    }
-    
-    func setGradientBackground() {
-        clearGradient()
-        let colorTop = UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(0).cgColor
-        let centerBottom = UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(0.8).cgColor
-        let colorBottom = UIColor.AppDefaultColor.appGrey.color.withAlphaComponent(1).cgColor
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, centerBottom, colorBottom]
-        gradientLayer.locations = [0.0, 0.8, 1.0]
-        gradientLayer.frame = self.effectView.bounds
-        gradientLayer.name = "gradient"
-        self.effectView.layer.insertSublayer(gradientLayer, at:0)
-    }
-    
-    func clearGradient() {
-        if let sublayers = effectView.layer.sublayers {
-            for layer in sublayers {
-                if layer.name == "gradient" {
-                    layer.removeFromSuperlayer()
-                }
-            }
-        }
     }
     
     private func setRating(ratings: [MovieRatingItem]?) {

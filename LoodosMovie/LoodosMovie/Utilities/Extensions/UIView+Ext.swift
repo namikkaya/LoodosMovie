@@ -32,3 +32,25 @@ extension UIView {
         return UINib(nibName: className, bundle: nil)
     }
 }
+
+extension UIView {
+    func setGradientBackground(colors: [CGColor], locations: [NSNumber]?) {
+        clearGradient()
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = colors
+        gradientLayer.locations = locations
+        gradientLayer.frame = self.bounds
+        gradientLayer.name = "gradient"
+        self.layer.insertSublayer(gradientLayer, at:0)
+    }
+    
+    func clearGradient() {
+        if let sublayers = self.layer.sublayers {
+            for layer in sublayers {
+                if layer.name == "gradient" {
+                    layer.removeFromSuperlayer()
+                }
+            }
+        }
+    }
+}
