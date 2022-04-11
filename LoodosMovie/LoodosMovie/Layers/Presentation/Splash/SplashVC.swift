@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 class SplashVC: BaseViewController {
-    private var vm: SplashVM!
+    private var vm: SplashViewModel!
     
     @IBOutlet private weak var animationView: AnimationView!
     @IBOutlet private weak var configLabel: UILabel! {
@@ -41,7 +41,7 @@ class SplashVC: BaseViewController {
         recursiveCheckConfig(delay: 3)
     }
     
-    func injectVM(vm: SplashVM) {
+    func injectVM(vm: SplashViewModel) {
         self.vm = vm
     }
 

@@ -9,7 +9,13 @@ import Foundation
 import UIKit
 
 protocol HomeViewModel: ViewModel {
-    
+    init(listUseCase: ListMovieUseCase)
+    var stateClosure: ((ObservationType<HomeVM.HomeObservation, ErrorEntity>) -> ())? { get set }
+    func getCell(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
+    func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int
+    func sizeForItemAt(_ collectionView: UICollectionView, collectionViewLayout: UICollectionViewLayout, indexPath: IndexPath) -> CGSize
+    func getImdbID(indexPath: IndexPath) -> String?
+    func searchKeyword(str: String?)
 }
 
 class HomeVM: HomeViewModel {
@@ -20,7 +26,7 @@ class HomeVM: HomeViewModel {
     
     private var sections:[SectionType] = []
     
-    init(listUseCase: ListMovieUseCase) {
+    required init(listUseCase: ListMovieUseCase) {
         self.listUseCase = listUseCase
     }
     

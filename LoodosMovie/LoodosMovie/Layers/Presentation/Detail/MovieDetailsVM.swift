@@ -9,21 +9,34 @@ import Foundation
 import UIKit
 
 protocol MovieDetailsViewModel: ViewModel {
+    init(useCase: DetailMovieUseCase, imdbID: String)
     var imdbID: String { get set }
+    var getDetailData: MovieDetails? { get }
+    var stateClosure: ((ObservationType<MovieDetailsVM.DetailObservation, ErrorEntity>) -> ())? { get set }
+    func getCell(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell
+    func numberOfRowsInSection(section:Int) -> Int
+    func heightForRowAt(indexPath: IndexPath) -> CGFloat
+    func numberOfSections() -> Int
 }
 
 class MovieDetailsVM: MovieDetailsViewModel {
+    var getDetailData: MovieDetails? {
+        get {
+            return detailData
+        }
+    }
+    
     var imdbID: String
     
     var stateClosure: ((ObservationType<DetailObservation, ErrorEntity>) -> ())?
     
     private let useCase:DetailMovieUseCase
     
-    private(set) var detailData: MovieDetails?
+    private var detailData: MovieDetails?
     
     private var sections: [SectionType] = []
     
-    init(useCase: DetailMovieUseCase, imdbID: String) {
+    required init(useCase: DetailMovieUseCase, imdbID: String) {
         self.useCase = useCase
         self.imdbID = imdbID
     }

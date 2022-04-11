@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeVC: BaseViewController {
-    private var vm: HomeVM!
+    private var vm: HomeViewModel!
     
     @IBOutlet private  weak var collectionView: UICollectionView!
     @IBOutlet private weak var searchBarBottomConstraint: NSLayoutConstraint!
@@ -27,7 +27,7 @@ class HomeVC: BaseViewController {
         vm.start()
     }
 
-    func injectVM(vm: HomeVM) {
+    func injectVM(vm: HomeViewModel) {
         self.vm = vm
     }
     

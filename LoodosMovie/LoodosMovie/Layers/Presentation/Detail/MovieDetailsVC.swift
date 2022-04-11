@@ -9,7 +9,7 @@ import UIKit
 
 class MovieDetailsVC: BaseViewController {
 
-    private var vm: MovieDetailsVM!
+    private var vm: MovieDetailsViewModel!
     @IBOutlet private weak var tableView: UITableView!
     
     
@@ -20,7 +20,7 @@ class MovieDetailsVC: BaseViewController {
         vm.start()
     }
 
-    func injectVM(vm: MovieDetailsVM) {
+    func injectVM(vm: MovieDetailsViewModel) {
         self.vm = vm
     }
     
@@ -62,7 +62,7 @@ class MovieDetailsVC: BaseViewController {
         DispatchQueue.main.async { [weak self] in
             if let headerView = self?.tableView.tableHeaderView as? StretchyTableHeaderView {
                 headerView.isHidden = false
-                headerView.setup(detail: self?.vm.detailData)
+                headerView.setup(detail: self?.vm.getDetailData)
             }
         }
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SplashViewModel: ViewModel {
-    
+    var stateClosure: ((ObservationType<SplashVM.SplashObservation, ErrorEntity>) -> ())? { get set }
 }
 
 class SplashVM: SplashViewModel {
