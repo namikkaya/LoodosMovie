@@ -50,8 +50,6 @@
 		4D56A031280428860019D709 /* NoInternetConnectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D56A02F280428860019D709 /* NoInternetConnectionVC.xib */; };
 		4D56A033280429630019D709 /* notConnection.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D56A032280429630019D709 /* notConnection.json */; };
 		4D73A64927FEC1B90058F0C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A64827FEC1B90058F0C0 /* AppDelegate.swift */; };
-		4D73A64D27FEC1B90058F0C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A64C27FEC1B90058F0C0 /* ViewController.swift */; };
-		4D73A65027FEC1B90058F0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D73A64E27FEC1B90058F0C0 /* Main.storyboard */; };
 		4D73A65227FEC1BB0058F0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D73A65127FEC1BB0058F0C0 /* Assets.xcassets */; };
 		4D73A65527FEC1BB0058F0C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D73A65327FEC1BB0058F0C0 /* LaunchScreen.storyboard */; };
 		4D73A66027FEC1BB0058F0C0 /* LoodosMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D73A65F27FEC1BB0058F0C0 /* LoodosMovieTests.swift */; };
@@ -153,8 +151,6 @@
 		4D56A032280429630019D709 /* notConnection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notConnection.json; sourceTree = "<group>"; };
 		4D73A64527FEC1B90058F0C0 /* LoodosMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D73A64827FEC1B90058F0C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D73A64C27FEC1B90058F0C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4D73A64F27FEC1B90058F0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D73A65127FEC1BB0058F0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D73A65427FEC1BB0058F0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D73A65627FEC1BB0058F0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -377,8 +373,6 @@
 				4D73A67B27FEC3130058F0C0 /* Views */,
 				4D73A67A27FEC2FF0058F0C0 /* Utilities */,
 				4D73A64827FEC1B90058F0C0 /* AppDelegate.swift */,
-				4D73A64C27FEC1B90058F0C0 /* ViewController.swift */,
-				4D73A64E27FEC1B90058F0C0 /* Main.storyboard */,
 				4D73A65127FEC1BB0058F0C0 /* Assets.xcassets */,
 				4D73A65327FEC1BB0058F0C0 /* LaunchScreen.storyboard */,
 				4D73A68B27FF48520058F0C0 /* GoogleService-Info.plist */,
@@ -787,7 +781,6 @@
 				4D56A00028021F6C0019D709 /* MovieDetailsVC.xib in Resources */,
 				4D569FE8280203430019D709 /* ImdbRatingView.xib in Resources */,
 				4D73A65227FEC1BB0058F0C0 /* Assets.xcassets in Resources */,
-				4D73A65027FEC1B90058F0C0 /* Main.storyboard in Resources */,
 				4DB7FB3C2800A82100F18F3F /* movieLoading.json in Resources */,
 				4D56A033280429630019D709 /* notConnection.json in Resources */,
 				4D569FF3280213EB0019D709 /* ToastMessageBarView.xib in Resources */,
@@ -938,7 +931,6 @@
 				4D569FF7280216090019D709 /* CALayer+Ext.swift in Sources */,
 				4DB7FB4C2800CA8800F18F3F /* HomeVC.swift in Sources */,
 				4D569FF2280213EB0019D709 /* ToastMessage.swift in Sources */,
-				4D73A64D27FEC1B90058F0C0 /* ViewController.swift in Sources */,
 				4D569FE32801EFCA0019D709 /* UIApplication+Ext.swift in Sources */,
 				4D56A01E280331820019D709 /* TableViewLoadingCell.swift in Sources */,
 				4DB7FB3227FF61CD00F18F3F /* SplashBuilderImpl.swift in Sources */,
@@ -1013,14 +1005,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4D73A64E27FEC1B90058F0C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D73A64F27FEC1B90058F0C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4D73A65327FEC1BB0058F0C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1158,10 +1142,10 @@
 				INFOPLIST_FILE = LoodosMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1188,10 +1172,10 @@
 				INFOPLIST_FILE = LoodosMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -12,7 +12,7 @@ protocol SplashViewModel: ViewModel {
 }
 
 class SplashVM: SplashViewModel {
-    typealias O = ObservationType
+    typealias CLS = ObservationType
     var stateClosure: ((ObservationType<SplashObservation, ErrorEntity>) -> ())?
     private let configService: FirebaseRemoteConfigurable
     

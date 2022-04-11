@@ -15,7 +15,7 @@ protocol MovieDetailsViewModel: ViewModel {
 class MovieDetailsVM: MovieDetailsViewModel {
     var imdbID: String
     
-    typealias O = ObservationType
+    typealias CLS = ObservationType
     var stateClosure: ((ObservationType<DetailObservation, ErrorEntity>) -> ())?
     
     private let useCase:DetailMovieUseCase
