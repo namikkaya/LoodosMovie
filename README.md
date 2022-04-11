@@ -9,10 +9,10 @@
 
 ### SS
 
-![](https://github.com/namikkaya/LoodosMovie/blob/main/logEvent.png?raw=true)
+![](https://github.com/namikkaya/LoodosMovie/blob/main/logEvent.png)
 
 > Follow your heart.
 
-![](https://github.com/namikkaya/LoodosMovie/blob/main/inAppMessaging.png?raw=true)
+![](https://github.com/namikkaya/LoodosMovie/blob/main/inAppMessaging.png)
 
 > Follow your heart.
