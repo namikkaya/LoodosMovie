@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol AppCoordinatorDelegate:Coordinator {
+protocol AppCoordinatoring:Coordinator {
     func goToMainFlow()
 }
 
-class AppCoordinator: NSObject, AppCoordinatorDelegate {
+class AppCoordinator: NSObject, AppCoordinatoring {
     var coordinatorType: CoordinatorType = .app
     var navigationController: BaseNavigationController
     var childCoordinator: [Coordinator] = []
@@ -20,17 +20,16 @@ class AppCoordinator: NSObject, AppCoordinatorDelegate {
         self.navigationController = navigationController
     }
     
-    func start(completion: @escaping () -> () = { }) {
+    func start() {
         let vc = SplashBuilder().build(coordinatorDelegate: self)
         self.navigationController.viewControllers = [vc]
-        completion()
     }
     
     func goToMainFlow() {
         let coordinator = MainCoordinator(parentNavigationViewController: self.navigationController)
         coordinator.delegate = self
         self.addChild(coordinator: coordinator)
-        coordinator.start { }
+        coordinator.start()
     }
     
     func reset(completion: @escaping () -> ()) {

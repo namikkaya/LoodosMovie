@@ -15,7 +15,8 @@ protocol Coordinator: NSObject {
     var coordinatorType: CoordinatorType { get set }
     var navigationController: BaseNavigationController { get set }
     var childCoordinator: [Coordinator] { get set }
-    func start(completion: @escaping () -> ())
+    func start()
+    func startWithCompletion(completion: @escaping () -> ())
     func reset(completion: @escaping () -> ())
     func addChild(coordinator: Coordinator)
     func removeChild(coordinator: Coordinator)
@@ -31,7 +32,8 @@ extension Coordinator {
         childCoordinator = childCoordinator.filter({ $0 !== coordinator })
     }
     
-    func start(completion: @escaping () -> () = {}) {}
+    func start() {}
+    func startWithCompletion(completion: @escaping () -> () = {}) {}
     func reset(completion: @escaping () -> () = {}) {}
     func finishViewController(controller: UIViewController) {}
 }

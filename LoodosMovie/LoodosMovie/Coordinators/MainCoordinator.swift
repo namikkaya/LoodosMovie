@@ -7,12 +7,13 @@
 
 import UIKit
 
-protocol MainCoordinatorDelegate: Coordinator {
+protocol MainCoordinatoring: Coordinator {
     var parentNavigationViewController: BaseNavigationController { get set }
+    init(parentNavigationViewController: BaseNavigationController)
     func goToDetail(imdbID: String)
 }
 
-class MainCoordinator: NSObject, MainCoordinatorDelegate {
+class MainCoordinator: NSObject, MainCoordinatoring {
     weak var delegate: CommonCoordinatorToCoordinatorDelegate?
     var parentNavigationViewController: BaseNavigationController
     var coordinatorType: CoordinatorType = .main
@@ -24,19 +25,19 @@ class MainCoordinator: NSObject, MainCoordinatorDelegate {
         return transition
     }()
     
-    init(parentNavigationViewController: BaseNavigationController) {
+    required init(parentNavigationViewController: BaseNavigationController) {
         self.parentNavigationViewController = parentNavigationViewController
         self.navigationController = BaseNavigationController()
     }
     
-    func start(completion: @escaping () -> ()) {
+    func start() {
         let vc = HomeBuilder().build(coordinatorDelegate: self)
         vc.coordinatorDelegate = self
         DispatchQueue.main.async { [weak self] in
             self?.navigationController.viewControllers = [vc]
             self?.navigationController.transitioningDelegate = self?.transition
             self?.navigationController.modalPresentationStyle = .fullScreen
-            self?.parentNavigationViewController.present(self?.navigationController ?? BaseNavigationController(), animated: true, completion: completion)
+            self?.parentNavigationViewController.present(self?.navigationController ?? BaseNavigationController(), animated: true, completion: nil)
         }
     }
     

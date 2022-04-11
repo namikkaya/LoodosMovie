@@ -112,7 +112,7 @@ extension HomeVM {
             case .movieItem:
                 return CGSize(width: collectionView.frame.size.width / 2, height: collectionView.frame.size.height / 2.5 )
             case .loading:
-                return CGSize(width: collectionView.frame.size.width, height: 80)
+                return CGSize(width: collectionView.frame.size.width, height: 150)
             }
         }
     }

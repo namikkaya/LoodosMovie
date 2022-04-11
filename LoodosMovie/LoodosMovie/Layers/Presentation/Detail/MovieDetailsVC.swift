@@ -80,8 +80,6 @@ extension MovieDetailsVC: UITableViewDelegate, UITableViewDataSource {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 44, right: 0)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.estimatedRowHeight = UITableView.automaticDimension
-        tableView.rowHeight = UITableView.automaticDimension
         
         if let interactivePopGestureRecognizer = navigationController?.interactivePopGestureRecognizer {
             tableView.panGestureRecognizer.require(toFail: interactivePopGestureRecognizer)

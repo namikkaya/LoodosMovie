@@ -10,7 +10,7 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var coordinator: AppCoordinatorDelegate?
+    var coordinator: AppCoordinatoring?
     let network = NetworkManager()
     
     var noConnectionVC: NoInternetConnectionVC?
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupCoordinator(navController: BaseNavigationController) {
         coordinator = AppCoordinator(navigationController: navController)
-        coordinator?.start {}
+        coordinator?.start()
     }
     
     private func setupNetworkListener() {
