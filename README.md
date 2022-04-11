@@ -16,3 +16,7 @@
 ![](https://github.com/namikkaya/LoodosMovie/blob/main/inAppMessaging.png)
 
 > In-App Messaging.
+
+##NOT:
+
+Cihaz testi yapılmamıştır. 
